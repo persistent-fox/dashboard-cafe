@@ -1,16 +1,16 @@
 import styled from "styled-components";
 
-interface IDishCardProps {
-}
+interface IDishCardProps {}
 
 export const DishCard = ({}: IDishCardProps) => {
-    return (
-        <div>
-            <div>DishCard</div>
-        </div>
-    )
-}
+  return (
+    <div>
+      <div>DishCard</div>
+      <span></span>
+    </div>
+  );
+};
 
 const StyledDishCard = styled.article`
   background-color: azure;
-`
+`;
