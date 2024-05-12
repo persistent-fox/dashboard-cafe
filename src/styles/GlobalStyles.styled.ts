@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-export const GlobalStyles = createGlobalStyle`
+export const GlobalStylesStyled = createGlobalStyle`
   *,
   *:after,
   *:before {
@@ -31,6 +31,7 @@ export const GlobalStyles = createGlobalStyle`
   a {
     text-decoration: none;
     cursor: pointer;
+    color: ${(props) => props.theme.colors.text.primary};
   }
 
   button {
@@ -42,12 +43,12 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     margin: 0;
-    text-align: center;
+    font-feature-settings: 'ss02' on, 'clig' off, 'liga' off;
     font-family: "Poppins", sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 1.2;
-    color: ${(props) => props.theme.colors.text.secondary};
-    background-color: ${(props) => props.theme.colors.grey.light};
+    color: ${(props) => props.theme.colors.text.primary};
+    background-color: ${(props) => props.theme.colors.gray.light};
   }
 `;
