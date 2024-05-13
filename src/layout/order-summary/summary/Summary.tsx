@@ -1,5 +1,6 @@
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { S } from "./../OrderSummary_Styles";
+import { Button } from "../../../components/button/Button";
 
 interface ISummaryProps {
   subTotal: number;
@@ -22,6 +23,7 @@ export const Summary = ({ subTotal, Tax, Total }: ISummaryProps) => {
         <S.Text>Total</S.Text>
         <S.TotalSum>$ {Total}</S.TotalSum>
       </FlexWrapper>
+      <Button primary>Pay Now</Button>
     </S.Summary>
   );
 };

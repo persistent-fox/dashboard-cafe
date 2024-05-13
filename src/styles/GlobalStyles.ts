@@ -1,6 +1,9 @@
 import { createGlobalStyle } from "styled-components";
+import { theme } from "./theme";
 
-export const GlobalStylesStyled = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle<{
+  theme: typeof theme;
+}>`
   *,
   *:after,
   *:before {
@@ -8,21 +11,6 @@ export const GlobalStylesStyled = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
-
-  // *::-webkit-scrollbar {
-  //   width: 5px;
-  // }
-  //
-  // *::-webkit-scrollbar-track {
-  //   background-color: ${(props) => props.theme.colors.scroll.trackDefault};
-  // }
-  //
-  // *::-webkit-scrollbar-thumb {
-  //   background-image: linear-gradient(to top,
-  //   ${(props) => props.theme.colors.scroll.thumbDefaultSecondary},
-  //   ${(props) => props.theme.colors.scroll.thumbDefaultAccent});
-  //   border-radius: 5px;
-  // }
 
   li {
     list-style: none;

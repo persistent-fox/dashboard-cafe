@@ -23,17 +23,19 @@ export const TextField = ({
   return (
     <>
       {label && <label htmlFor={inputId}>{label}</label>}
-      <div>
-        <StyledInput placeholder={placeholder} id={inputId} />
-        {iconId && (
+      {iconId ? (
+        <div>
+          <StyledInput placeholder={placeholder} id={inputId} />
           <Icon
             viewBox={viewBoxIcon}
             height={heightIcon}
             width={widthIcon}
             iconId={iconId}
           />
-        )}
-      </div>
+        </div>
+      ) : (
+        <StyledInput placeholder={placeholder} id={inputId} />
+      )}
     </>
   );
 };

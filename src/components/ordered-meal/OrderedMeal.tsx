@@ -7,13 +7,14 @@ import { ControlButton } from "../control-button/ControlButton";
 interface IOrderedMealProps {
   title: string;
   price: number;
+  srcImg: string;
 }
 
-export const OrderedMeal = ({ title, price }: IOrderedMealProps) => {
+export const OrderedMeal = ({ title, price, srcImg }: IOrderedMealProps) => {
   return (
     <StyledOrderedMeal>
       <FlexWrapper gap={"12px"}>
-        {/*<img src={srcImg} alt="dish" />*/}
+        <img src={srcImg} alt="dish" />
         <Info>
           <Title>{title}</Title>
           <FlexWrapper justify={"space-between"}>

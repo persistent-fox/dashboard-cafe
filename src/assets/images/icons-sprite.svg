@@ -77,4 +77,12 @@
         <path id="plus" d="M4.16675 10H15.8334M10.0001 4.16669V15.8334" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
 
         <path id="minus" d="M4.16675 10H15.8334" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+
+
+
+        <!--Поиск-->
+
+
+        <path id="search" d="M17.3556 17.3658C18.8279 15.8961 19.7388 13.8641 19.7388 11.6194C19.7388 7.13518 16.1036 3.5 11.6194 3.5C7.13518 3.5 3.5 7.13518 3.5 11.6194C3.5 16.1036 7.13518 19.7388 11.6194 19.7388C13.8589 19.7388 15.8866 18.8321 17.3556 17.3658ZM17.3556 17.3658L20.5 20.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+
 </svg>

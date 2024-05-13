@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
-interface ISwitcherProps {}
+interface ISwitcherProps {
+  onChange?: () => void;
+}
 
 export const Switcher = ({}: ISwitcherProps) => {
   return (
     <StyledSwitcher>
-      <Input checked type="radio" id="switch-on" name={"action"} />
+      <Input defaultChecked type="radio" id="switch-on" name={"action"} />
       <label htmlFor="switch-on">Buy</label>
       <Input type="radio" id="switch-off" name={"action"} />
       <LabelOff htmlFor="switch-off">Reservation</LabelOff>
@@ -14,7 +16,7 @@ export const Switcher = ({}: ISwitcherProps) => {
   );
 };
 
-const StyledSwitcher = styled.div`
+export const StyledSwitcher = styled.div`
   position: relative;
   display: flex;
   padding: 4px;
