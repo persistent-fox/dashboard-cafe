@@ -4,15 +4,22 @@ import { Header } from "./layout/header/Header";
 import { FoodCategory } from "./layout/food-category/FoodCategory";
 import { FlexWrapper } from "./components/FlexWrapper";
 import { OrderSummary } from "./layout/order-summary/OrderSummary";
+import { ControlFood } from "./layout/control-food/ControlFood";
+import { Main } from "./components/Main";
+import { Breadcrumbs } from "./layout/breadcrumbs/Breadcrumbs";
+import { FoodMenu } from "./layout/food-menu/FoodMenu";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      {/*<DishCard title={"Steak sapi bakar"} cost={25.12} />*/}
-      {/*<DishCard title={"Ayam kentang"} cost={15.4} />*/}
       <FlexWrapper justify={"space-between"}>
         <FoodCategory />
+        <Main>
+          <Breadcrumbs paths={["Dashboard", "Food"]} />
+          <ControlFood />
+          <FoodMenu />
+        </Main>
         <OrderSummary />
       </FlexWrapper>
     </div>
@@ -20,9 +27,3 @@ function App() {
 }
 
 export default App;
-
-const Title = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: #e91e63;
-`;

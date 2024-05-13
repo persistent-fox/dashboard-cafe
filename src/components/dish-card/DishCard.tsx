@@ -4,36 +4,37 @@ import { Title } from "../Title";
 interface IDishCardProps {
   title: string;
   cost: number;
+  srcImg: string;
+  filterId: string;
 }
 
-export const DishCard = ({ title, cost }: IDishCardProps) => {
+export const DishCard = ({ title, cost, srcImg }: IDishCardProps) => {
   return (
     <StyledDishCard>
-      <img
-        src="https://www.tokyo-city.ru/images/interesno/ot-edy-bednyakov-do-izyskannykh.jpg"
-        alt="dish"
-      />
+      <img src={srcImg} alt="dish" />
       <Title>{title}</Title>
       <Cost>$ {cost}</Cost>
     </StyledDishCard>
   );
 };
 
-const StyledDishCard = styled.article`
+export const StyledDishCard = styled.article`
   background-color: ${(props) => props.theme.colors.primary};
   padding: 12px 8px 16px;
   border-radius: 16px;
-  max-width: 220px;
 
   img {
+    display: block;
     width: 202px;
     height: 158px;
     object-fit: cover;
     border-radius: 16px;
+    margin: 0 auto;
     margin-bottom: 12px;
   }
 
   ${Title} {
+    text-align: center;
     margin-bottom: 4px;
   }
 `;

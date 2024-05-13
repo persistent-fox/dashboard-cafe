@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { FlexWrapper } from "../FlexWrapper";
-// import srcImg from "./../../assets/images/dish.jpg";
 import { Title } from "../Title";
 import { ControlButton } from "../control-button/ControlButton";
 

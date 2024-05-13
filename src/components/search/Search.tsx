@@ -1,18 +1,25 @@
 import styled from "styled-components";
 import { Icon } from "../icon/Icon";
 
-interface ISearchProps {}
+interface ISearchProps {
+  placeholder?: string;
+}
 
-export const Search = ({}: ISearchProps) => {
+export const Search = ({ placeholder }: ISearchProps) => {
   return (
     <StyledSearch>
-      <Input type="text" />
-      <Icon iconId={"search"} />
+      <Input placeholder={placeholder} type="text" />
+      <Icon
+        width={"24"}
+        height={"24"}
+        viewBox={"0 0 24 24"}
+        iconId={"search"}
+      />
     </StyledSearch>
   );
 };
 
-export const StyledSearch = styled.input`
+export const StyledSearch = styled.div`
   position: relative;
   svg {
     position: absolute;
@@ -24,9 +31,11 @@ export const StyledSearch = styled.input`
 `;
 
 const Input = styled.input`
+  width: 100%;
+  border: none;
   border-right: 1px solid ${(props) => props.theme.colors.gray.medium};
-  padding: 22px 24px;
-  color: ${(props) => props.theme.colors.text.gray.light};
+  padding: 22px 24px 22px 58px;
+  color: ${(props) => props.theme.colors.text.primary};
   font-feature-settings:
     "ss02" on,
     "clig" off,
@@ -35,4 +44,7 @@ const Input = styled.input`
   font-size: 16px;
   font-weight: 400;
   line-height: 1.2;
+  &::placeholder {
+    color: ${(props) => props.theme.colors.text.gray.light};
+  }
 `;

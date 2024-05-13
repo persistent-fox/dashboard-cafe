@@ -48,10 +48,10 @@ export const StyledSwitcher = styled.div`
 
 const Slider = styled.span`
   position: absolute;
-  top: 1px;
-  left: 1px;
-  width: calc(50% - 1px);
-  height: calc(100% - 2px);
+  top: 4px;
+  left: 4px;
+  width: calc(50% - 4px);
+  height: calc(100% - 8px);
   border-radius: 20px;
   transition: transform 0.2s;
   background-color: ${(props) => props.theme.colors.primary};
