@@ -44,7 +44,7 @@ const Button = styled.button<ButtonProps>`
   border-radius: 50%;
   padding: 8px;
   color: ${(props) => props.theme.colors.text.gray.medium};
-  background: ${(props) => props.theme.colors.gray.medium};
+  background: ${(props) => props.theme.colors.gray.light};
 
   ${(props) =>
     props.plus &&
