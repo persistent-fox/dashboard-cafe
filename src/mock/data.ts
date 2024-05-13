@@ -59,7 +59,15 @@ export const foodFilterData: Array<TFoodFilterData> = [
   },
 ];
 
-export const foodCategoryData = [
+export type TFoodCategoryData = {
+  id: number;
+  title: string;
+  price: number;
+  filterId: string;
+  srcImg: string;
+};
+
+export const foodCategoryData: Array<TFoodCategoryData> = [
   {
     id: 1,
     title: "Ayam kentang",
@@ -154,5 +162,131 @@ export const foodCategoryData = [
     filterId: "pasta",
     srcImg:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9E2AXs4-Oqx274MrHhntE-7vM5c1dKp2bHXqpEYrHJg&s",
+  },
+];
+
+export const coffeeCategoryData: Array<TFoodCategoryData> = [
+  {
+    id: 1,
+    title: "Latte",
+    price: 5.12,
+    filterId: "latte",
+    srcImg:
+      "https://bialetti.ru/upload/medialibrary/6a6/6a6b85edef1e91dcd9fc1771d3de9390.jpg",
+  },
+  {
+    id: 2,
+    title: "Latte Step",
+    price: 15.4,
+    filterId: "latte",
+    srcImg:
+      "https://www.foodandwine.com/thmb/CCe2JUHfjCQ44L0YTbCu97ukUzA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Partners-Latte-FT-BLOG0523-09569880de524fe487831d95184495cc.jpg",
+  },
+  {
+    id: 3,
+    title: "Macchiato light",
+    price: 10.4,
+    filterId: "macchiato",
+    srcImg:
+      "https://liliebakery.fr/wp-content/uploads/2023/10/Latte-macchiato-Lilie-Bakery.jpg",
+  },
+  {
+    id: 4,
+    title: "macchiato middle",
+    price: 11.21,
+    filterId: "macchiato",
+    srcImg:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Latte_macchiato_with_coffee_beans.jpg/1200px-Latte_macchiato_with_coffee_beans.jpg",
+  },
+  {
+    id: 5,
+    title: "Latte dark",
+    price: 17.89,
+    filterId: "latte",
+    srcImg:
+      "https://www.livingnorth.com/images/media/articles/food-and-drink/eat-and-drink/coffee.png?",
+  },
+  {
+    id: 6,
+    title: "Cappuccino",
+    price: 5.99,
+    filterId: "cappuccino",
+    srcImg:
+      "https://www.acouplecooks.com/wp-content/uploads/2020/10/how-to-make-cappuccino-005.jpg",
+  },
+  {
+    id: 7,
+    title: "Macchiato light",
+    price: 19.5,
+    filterId: "macchiato",
+    srcImg:
+      "https://bigcupofcoffee.com/wp-content/uploads/2023/05/cafe-mocha.jpg",
+  },
+  {
+    id: 8,
+    title: "Starbucks",
+    price: 12.43,
+    filterId: "mocha",
+    srcImg:
+      "https://globalassets.starbucks.com/digitalassets/products/bev/SBX20190617_Cappuccino.jpg?impolicy=1by1_wide_topcrop_630",
+  },
+  {
+    id: 9,
+    title: "Mocha",
+    price: 8.24,
+    filterId: "mocha",
+    srcImg:
+      "https://athome.starbucks.com/sites/default/files/styles/homepage_banner_xlarge/public/2021-06/CaffeMocha_Header.jpg.webp?itok=O9FqK5Y_",
+  },
+];
+
+export const beveragesCategoryData: Array<TFoodCategoryData> = [
+  {
+    id: 1,
+    title: "Penette",
+    price: 5.12,
+    filterId: "vine",
+    srcImg:
+      "https://buywinesonline.com/cdn/shop/files/1000StoriesBourbonBarrelAgedCabernetSauvignon_1.jpg?v=1698706018",
+  },
+  {
+    id: 2,
+    title: "Rosh",
+    price: 15.4,
+    filterId: "vine",
+    srcImg:
+      "https://target.scene7.com/is/image/Target/GUEST_fc04ebb4-06bc-4997-b27c-c4d2ac38165b?wid=488&hei=488&fmt=pjpeg",
+  },
+  {
+    id: 3,
+    title: "Jack",
+    price: 10.4,
+    filterId: "whisky",
+    srcImg:
+      "https://www.sandhamswine.co.uk/images/shop/more/600x600_426_bc7ccd27a6037b6cfa951f6d9d5df324_0660BB.jpg",
+  },
+  {
+    id: 4,
+    title: "Mead middle",
+    price: 11.21,
+    filterId: "mead",
+    srcImg:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK6BRPuVmU29KZE4LNPu9vrcuRUL3qZNzqozUapQkgng&s",
+  },
+  {
+    id: 5,
+    title: "Mead dark",
+    price: 17.89,
+    filterId: "mead",
+    srcImg:
+      "https://static.specsonline.com/wp-content/uploads/reload/008060040002.jpg",
+  },
+  {
+    id: 6,
+    title: "Classic",
+    price: 5.99,
+    filterId: "whisky",
+    srcImg:
+      "https://cdnb.artstation.com/p/assets/images/images/011/721/363/large/christophe-delahaye-front-small.jpg?1531071187",
   },
 ];

@@ -7,31 +7,37 @@ export const FoodCategory = () => {
       id: 1,
       title: "coffee",
       iconId: "coffee",
+      path: "/coffee",
     },
     {
       id: 2,
       title: "Beverages",
       iconId: "beverages",
+      path: "/beverages",
     },
     {
       id: 3,
       title: "Food",
       iconId: "food",
+      path: "/food",
     },
     {
       id: 4,
       title: "Appetizer",
       iconId: "appetizer",
+      path: "/appetizer",
     },
     {
       id: 5,
       title: "Bread",
       iconId: "bread",
+      path: "/bread",
     },
     {
       id: 6,
       title: "Snack",
       iconId: "snack",
+      path: "/snack",
     },
   ];
 
@@ -40,7 +46,10 @@ export const FoodCategory = () => {
       <ul>
         {list.map((item) => (
           <li key={item.id}>
-            <S.Link href="">
+            <S.Link
+              to={item.path}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
               <Icon
                 width={"33"}
                 height={"32"}

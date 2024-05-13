@@ -7,6 +7,7 @@ import { UserIcon } from "../../components/user-icon/UserIcon";
 
 import { ArrowBack } from "./arrow-back/ArrowBack";
 import { FlexWrapper } from "../../components/FlexWrapper";
+import { OptionList } from "./option-list/OptionList";
 
 interface IHeaderProps {}
 
@@ -19,7 +20,10 @@ export const Header = ({}: IHeaderProps) => {
       </FlexWrapper>
       <S.Rabber>
         <Navigation />
-        <Button>Dinning option</Button>
+        <S.DinningOption>
+          <Button>Dinning option</Button>
+          <OptionList />
+        </S.DinningOption>
         <Date time={"10:53:00"} date={"26/02/2023"} />
         <UserIcon
           srcImg={

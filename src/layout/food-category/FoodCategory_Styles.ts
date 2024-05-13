@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 const FoodCategory = styled.aside`
   background-color: ${(props) => props.theme.colors.primary};
-  height: calc(100vh - 78px);
+  height: calc(100vh - 83px);
   width: 125px;
   border-right: 1px solid ${(props) => props.theme.colors.gray.medium};
   ul {
@@ -13,7 +14,7 @@ const FoodCategory = styled.aside`
   }
 `;
 
-const Link = styled.a`
+const Link = styled(NavLink)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,6 +27,13 @@ const Link = styled.a`
   font-size: 12px;
   font-weight: 500;
   &:hover {
+    background: var(
+      --Gradient-primary,
+      linear-gradient(219deg, #ffab18 -6.67%, #ff2197 137.69%)
+    );
+    color: ${(props) => props.theme.colors.text.secondary};
+  }
+  &.active {
     background: var(
       --Gradient-primary,
       linear-gradient(219deg, #ffab18 -6.67%, #ff2197 137.69%)

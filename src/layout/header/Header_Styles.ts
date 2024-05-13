@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { StyledLogo } from "../../components/logo/Logo";
-import { StyledButton } from "../../components/button/Button";
 
 const Header = styled.header`
   display: flex;
@@ -12,7 +11,12 @@ const Header = styled.header`
   ${StyledLogo} {
     margin-left: 24px;
   }
-  ${StyledButton} {
+`;
+
+const DinningOption = styled.div`
+  position: relative;
+  button {
+    position: relative;
     padding: 8px 20px;
   }
 `;
@@ -56,6 +60,19 @@ const Navigation = styled.nav`
   margin-right: 16px;
 `;
 
+const OptionList = styled.ul`
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 366px;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid ${(props) => props.theme.colors.gray.medium};
+  background-color: ${(props) => props.theme.colors.primary};
+  z-index: 2;
+`;
+
 const List = styled.ul`
   display: flex;
   justify-content: space-between;
@@ -87,9 +104,11 @@ const Date = styled.div`
 
 export const S = {
   Header,
+  DinningOption,
   ArrowBack,
   Rabber,
   Navigation,
+  OptionList,
   List,
   Link,
   Date,

@@ -1,13 +1,15 @@
-import { foodCategoryData } from "../../mock/data";
+import { foodCategoryData, TFoodCategoryData } from "../../mock/data";
 import { DishCard } from "../../components/dish-card/DishCard";
 import { S } from "./FoodMenu_Styles";
 
-interface IFoodMenuProps {}
+interface IFoodMenuProps {
+  CategoryData: Array<TFoodCategoryData>;
+}
 
-export const FoodMenu = ({}: IFoodMenuProps) => {
+export const FoodMenu = ({ CategoryData }: IFoodMenuProps) => {
   return (
     <S.FoodMenu>
-      {foodCategoryData.map((item) => (
+      {CategoryData.map((item) => (
         <DishCard
           key={item.id}
           filterId={item.filterId}

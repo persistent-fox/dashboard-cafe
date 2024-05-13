@@ -11,7 +11,16 @@ export const GlobalStyles = createGlobalStyle<{
     margin: 0;
     padding: 0;
   }
+  *::-webkit-scrollbar {
+    width: 4px;
+  }
 
+  *::-webkit-scrollbar-thumb {
+    width: 4px;
+    border-radius: 4px;
+    background: ${(props) => props.theme.colors.text.gray.light};
+  }
+  
   li {
     list-style: none;
   }

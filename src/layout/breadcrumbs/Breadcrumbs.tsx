@@ -9,7 +9,7 @@ export const Breadcrumbs = ({ paths }: IBreadcrumbsProps) => {
     <S.Breadcrumbs>
       <S.List>
         {paths.map((item) => (
-          <S.ListItem>{item}</S.ListItem>
+          <S.ListItem key={item}>{item}</S.ListItem>
         ))}
       </S.List>
     </S.Breadcrumbs>

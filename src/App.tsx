@@ -8,6 +8,12 @@ import { ControlFood } from "./layout/control-food/ControlFood";
 import { Main } from "./components/Main";
 import { Breadcrumbs } from "./layout/breadcrumbs/Breadcrumbs";
 import { FoodMenu } from "./layout/food-menu/FoodMenu";
+import {
+  beveragesCategoryData,
+  coffeeCategoryData,
+  foodCategoryData,
+} from "./mock/data";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
@@ -18,7 +24,20 @@ function App() {
         <Main>
           <Breadcrumbs paths={["Dashboard", "Food"]} />
           <ControlFood />
-          <FoodMenu />
+          <Routes>
+            <Route
+              path={"/food"}
+              element={<FoodMenu CategoryData={foodCategoryData} />}
+            />
+            <Route
+              path={"/coffee"}
+              element={<FoodMenu CategoryData={coffeeCategoryData} />}
+            />
+            <Route
+              path={"/beverages"}
+              element={<FoodMenu CategoryData={beveragesCategoryData} />}
+            />
+          </Routes>
         </Main>
         <OrderSummary />
       </FlexWrapper>

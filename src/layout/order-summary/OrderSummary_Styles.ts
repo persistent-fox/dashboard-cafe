@@ -8,6 +8,7 @@ const OrderSummary = styled.aside`
   padding: 16px 0 24px;
   background-color: ${(props) => props.theme.colors.primary};
   border-left: 1px solid ${(props) => props.theme.colors.gray.medium};
+  height: calc(100vh - 83px);
   ${Title} {
     font-size: 20px;
     font-weight: 600;
