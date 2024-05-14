@@ -1,9 +1,9 @@
-interface IAuthLayoutProps {}
+import { Login } from './components/login/Login';
 
-export const AuthLayout = ({}: IAuthLayoutProps) => {
-  return (
-    <div>
-      <div>AuthLayout</div>
-    </div>
-  );
+export const AuthLayout = () => {
+	return (
+		<div>
+			<Login />
+		</div>
+	);
 };
