@@ -1,21 +1,49 @@
-import styled from 'styled-components';
-import { Icon } from '../../../../components/icon/Icon';
+import styled, { css } from 'styled-components';
+import { FlexWrapper } from '../../../components/FlexWrapper';
+import { StyledButton } from '../../../components/button/Button';
 
-interface IOptionItemProps {
-	label: string;
-	iconId: string;
-}
+const DinningOption = styled.div`
+	position: relative;
+	button {
+		position: relative;
+		padding: 8px 20px;
+	}
+`;
 
-export const OptionItem = ({ label, iconId }: IOptionItemProps) => {
-	return (
-		<Label>
-			<Icon width={'24'} height={'24'} viewBox={'0 0 24 24'} iconId={iconId} />
-			<Text>{label}</Text>
-			<Input checked type='radio' />
-			<Ratio />
-		</Label>
-	);
+type TOptionList = {
+	isToggle: boolean;
 };
+
+const OptionList = styled.ul<TOptionList>`
+	position: absolute;
+	top: 50px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	width: 366px;
+	padding: 16px;
+	visibility: hidden;
+	border-radius: 16px;
+	border: 1px solid ${props => props.theme.colors.gray.medium};
+	background-color: ${props => props.theme.colors.primary};
+	z-index: 2;
+	${props =>
+		props.isToggle &&
+		css`
+			visibility: visible;
+		`}
+
+	${FlexWrapper} {
+		display: flex;
+		gap: 12px;
+	}
+	${StyledButton} {
+		padding: 12px;
+		width: 50%;
+	}
+`;
 
 const Text = styled.span`
 	flex-grow: 1;
@@ -23,8 +51,9 @@ const Text = styled.span`
 
 const Ratio = styled.span`
 	display: block;
-	width: 24px;
-	height: 24px;
+	width: 20px;
+	height: 20px;
+	padding: 4px;
 	border-radius: 50%;
 	background-color: ${props => props.theme.colors.primary};
 	border: 1px solid ${props => props.theme.colors.text.gray.light};
@@ -50,7 +79,7 @@ const Label = styled.label`
 	cursor: pointer;
 	color: ${props => props.theme.colors.text.gray.dark};
 	font-size: 16px;
-	transition: all 0.3s;
+	transition: color 0.3s;
 	&:hover {
 		font-weight: 500;
 		color: ${props => props.theme.colors.text.accent};
@@ -75,3 +104,12 @@ const Label = styled.label`
 		}
 	}
 `;
+
+export const S = {
+	DinningOption,
+	OptionList,
+	Text,
+	Ratio,
+	Input,
+	Label,
+};
