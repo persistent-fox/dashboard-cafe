@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { StyledDishCard } from "../../../components/dish-card/DishCard";
+import { StyledDishCard } from "../../../../components/dish-card/DishCard";
 
 const FoodMenu = styled.section`
   display: grid;

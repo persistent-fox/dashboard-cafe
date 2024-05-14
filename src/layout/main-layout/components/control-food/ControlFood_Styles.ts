@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { StyledSearch } from "../../../components/search/Search";
-import { StyledMenuFilter } from "../../../components/menu-filter/MenuFilter";
+import { StyledSearch } from "../../../../components/search/Search";
+import { StyledMenuFilter } from "../../../../components/menu-filter/MenuFilter";
 
 const ControlFood = styled.section`
   display: flex;

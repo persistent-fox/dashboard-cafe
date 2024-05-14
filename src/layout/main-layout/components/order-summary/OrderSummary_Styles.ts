@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { Title } from "../../../components/Title";
-import { FlexWrapper } from "../../../components/FlexWrapper";
-import { StyledButton } from "../../../components/button/Button";
-import { StyledSwitcher } from "../../../components/switcher/Switcher";
+import { Title } from "../../../../components/Title";
+import { FlexWrapper } from "../../../../components/FlexWrapper";
+import { StyledButton } from "../../../../components/button/Button";
+import { StyledSwitcher } from "../../../../components/switcher/Switcher";
 
 const OrderSummary = styled.aside`
   padding: 16px 0 24px;

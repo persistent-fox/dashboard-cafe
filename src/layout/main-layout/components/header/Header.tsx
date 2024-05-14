@@ -1,11 +1,11 @@
 import { S } from "./Header_Styles";
-import { Logo } from "../../../components/logo/Logo";
+import { Logo } from "../../../../components/logo/Logo";
 import { Navigation } from "./navigation/Navigation";
 import { Date } from "./date/date";
-import { UserIcon } from "../../../components/user-icon/UserIcon";
+import { UserIcon } from "../../../../components/user-icon/UserIcon";
 
 import { ArrowBack } from "./arrow-back/ArrowBack";
-import { FlexWrapper } from "../../../components/FlexWrapper";
+import { FlexWrapper } from "../../../../components/FlexWrapper";
 import DinningOption from "./dinning-option/DinningOption";
 
 export const Header = () => {

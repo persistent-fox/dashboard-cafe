@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button } from "../../../../components/button/Button";
+import { Button } from "../../../../../components/button/Button";
 import { S } from "./DinningOption_Styles";
 import { OptionList } from "./option-list/OptionList";
 

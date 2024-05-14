@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
-import { FlexWrapper } from "../../../../components/FlexWrapper";
-import { StyledButton } from "../../../../components/button/Button";
+import { FlexWrapper } from "../../../../../components/FlexWrapper";
+import { StyledButton } from "../../../../../components/button/Button";
 
 const DinningOption = styled.div`
   position: relative;
@@ -80,21 +80,25 @@ const Label = styled.label`
   color: ${(props) => props.theme.colors.text.gray.dark};
   font-size: 16px;
   transition: color 0.3s;
+
   &:hover {
     font-weight: 500;
     color: ${(props) => props.theme.colors.text.accent};
     background-color: ${(props) => props.theme.colors.tertiary};
     border: 1px solid ${(props) => props.theme.colors.accent};
+
     ${Ratio} {
       border: 1px solid ${(props) => props.theme.colors.accent};
     }
   }
+
   input:checked + ${Ratio} {
     position: relative;
     border: 1px solid ${(props) => props.theme.colors.accent};
     background-color: ${(props) => props.theme.colors.accent};
+
     &:before {
-      content: url("./../../../../assets/images/check.svg");
+      content: url("../../../../../assets/images/check.svg");
       position: absolute;
       width: 12px;
       height: 12px;

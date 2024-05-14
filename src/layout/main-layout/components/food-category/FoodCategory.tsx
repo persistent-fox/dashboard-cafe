@@ -1,5 +1,5 @@
 import { S } from "./FoodCategory_Styles";
-import { Icon } from "../../../components/icon/Icon";
+import { Icon } from "../../../../components/icon/Icon";
 
 export const FoodCategory = () => {
   const list = [

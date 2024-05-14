@@ -1,6 +1,6 @@
-import { FlexWrapper } from "../../../../components/FlexWrapper";
+import { FlexWrapper } from "../../../../../components/FlexWrapper";
 import { S } from "../OrderSummary_Styles";
-import { Button } from "../../../../components/button/Button";
+import { Button } from "../../../../../components/button/Button";
 
 interface ISummaryProps {
   subTotal: number;

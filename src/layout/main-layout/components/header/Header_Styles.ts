@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { StyledLogo } from "../../../components/logo/Logo";
+import { StyledLogo } from "../../../../components/logo/Logo";
 
 const Header = styled.header`
   display: flex;

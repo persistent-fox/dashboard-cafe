@@ -1,6 +1,6 @@
-import { Button } from "../../../../components/button/Button";
-import { TextField } from "../../../../components/text-field/TextField";
-import { Switcher } from "../../../../components/switcher/Switcher";
+import { Button } from "../../../../../components/button/Button";
+import { TextField } from "../../../../../components/text-field/TextField";
+import { Switcher } from "../../../../../components/switcher/Switcher";
 import { S } from "../OrderSummary_Styles";
 
 interface ICustomerInformationProps {}

@@ -1,5 +1,5 @@
-import { FlexWrapper } from "../../../../../components/FlexWrapper";
-import { Button } from "../../../../../components/button/Button";
+import { FlexWrapper } from "../../../../../../components/FlexWrapper";
+import { Button } from "../../../../../../components/button/Button";
 import { S } from "../DinningOption_Styles";
 import { OptionItem } from "./option-item/OptionItem";
 import { useState } from "react";

@@ -1,5 +1,5 @@
-import { foodCategoryData, TFoodCategoryData } from "../../../mock/data";
-import { DishCard } from "../../../components/dish-card/DishCard";
+import { foodCategoryData, TFoodCategoryData } from "../../../../mock/data";
+import { DishCard } from "../../../../components/dish-card/DishCard";
 import { S } from "./FoodMenu_Styles";
 
 interface IFoodMenuProps {

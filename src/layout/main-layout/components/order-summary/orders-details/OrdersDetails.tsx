@@ -1,7 +1,7 @@
-import { Title } from "../../../../components/Title";
+import { Title } from "../../../../../components/Title";
 import { S } from "../OrderSummary_Styles";
-import { orderedSummaryData } from "../../../../mock/data";
-import { OrderedMeal } from "../../../../components/ordered-meal/OrderedMeal";
+import { orderedSummaryData } from "../../../../../mock/data";
+import { OrderedMeal } from "../../../../../components/ordered-meal/OrderedMeal";
 
 interface IOrdersDetailsProps {}
 

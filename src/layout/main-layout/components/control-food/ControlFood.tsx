@@ -1,7 +1,7 @@
-import { Search } from "../../../components/search/Search";
+import { Search } from "../../../../components/search/Search";
 import { S } from "./ControlFood_Styles";
-import { MenuFilter } from "../../../components/menu-filter/MenuFilter";
-import { foodFilterData } from "../../../mock/data";
+import { MenuFilter } from "../../../../components/menu-filter/MenuFilter";
+import { foodFilterData } from "../../../../mock/data";
 
 interface IControlFoodProps {}
 
