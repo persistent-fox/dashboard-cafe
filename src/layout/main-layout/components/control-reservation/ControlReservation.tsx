@@ -10,7 +10,7 @@ export const ControlReservation = () => {
 	return (
 		<S.ControlReservation>
 			<FlexWrapper align='center' gap='32px'>
-				<S.IconFrame>
+				<S.IconFrame to={'/dashboard/food'}>
 					<Icon width='24' height='24' viewBox='0 0 24 24' iconId='arrow-back' />
 				</S.IconFrame>
 				<Checkbox

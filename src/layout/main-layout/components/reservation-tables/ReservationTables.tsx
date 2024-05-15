@@ -4,6 +4,7 @@ import { TTablesData, listHallLinesData } from '../../../../mock/data';
 import { HallLine } from './hall-line/HallLine';
 import { FlexWrapper } from '../../../../components/FlexWrapper';
 import { PlaceOrder } from './place-order/PlaceOrder';
+import { RunningOrder } from '../modals/running-order/RunningOrder';
 
 type TReservationTablesProps = {
 	tables: Array<TTablesData>;
@@ -31,6 +32,7 @@ export const ReservationTables = ({ tables }: TReservationTablesProps) => {
 				<HallLine listLines={listHallLinesData} />
 				<HallLine listLines={listHallLinesData} />
 			</FlexWrapper>
+			<RunningOrder />
 		</S.ReservationTables>
 	);
 };

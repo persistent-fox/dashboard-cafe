@@ -3,6 +3,7 @@ import { EReservationType } from '../../../../components/checkbox/Checkbox';
 import { TTableType } from '../../../../mock/data';
 
 const ReservationTables = styled.section`
+	position: relative;
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;

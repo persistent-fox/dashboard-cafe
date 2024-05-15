@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { StyledMenuFilter } from '../../../../components/menu-filter/MenuFilter';
 import { StyledSearch } from '../../../../components/search/Search';
+import { NavLink } from 'react-router-dom';
 
 const ControlReservation = styled.section`
 	display: flex;
@@ -17,7 +18,7 @@ const ControlReservation = styled.section`
 	}
 `;
 
-const IconFrame = styled.div`
+const IconFrame = styled(NavLink)`
 	display: flex;
 	justify-content: center;
 	align-items: center;

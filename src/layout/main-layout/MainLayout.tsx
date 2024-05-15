@@ -12,7 +12,7 @@ export const MainLayout = () => {
 			<Header />
 			<Routes>
 				<Route path='/dashboard' element={<MenuLayout />}>
-					<Route path={'*'} element={<Navigate to={'/dashboard'} />} />
+					<Route path={'*'} element={<Navigate to={'/dashboard/food'} />} />
 					<Route path={'food'} element={<FoodMenu CategoryData={foodCategoryData} />} />
 					<Route path={'coffee'} element={<FoodMenu CategoryData={coffeeCategoryData} />} />
 					<Route path={'beverages'} element={<FoodMenu CategoryData={beveragesCategoryData} />} />
