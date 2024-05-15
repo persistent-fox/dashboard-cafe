@@ -43,7 +43,7 @@ export const ControlReservation = () => {
 			</FlexWrapper>
 			<FlexWrapper>
 				<MenuFilter filterItems={ReservationFilterData} />
-				<Search />
+				<Search placeholder='Search table...' />
 			</FlexWrapper>
 		</S.ControlReservation>
 	);

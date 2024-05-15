@@ -11,6 +11,7 @@ const ReservationTables = styled.section`
 `;
 
 const TableFrame = styled.section`
+	position: relative;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, 170px);
 	grid-template-rows: repeat(auto-fit, 170px);
@@ -21,6 +22,14 @@ const TableFrame = styled.section`
 	align-items: center;
 	padding: 24px;
 	flex-grow: 1;
+`;
+
+const MainInfo = styled.div`
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 `;
 
 type TTableProps = {
@@ -168,4 +177,5 @@ export const S = {
 	ChairX,
 	Frame,
 	Name,
+	MainInfo,
 };
