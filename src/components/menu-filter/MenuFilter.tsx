@@ -1,15 +1,15 @@
 import styled from "styled-components";
-import { TFoodFilterData } from "../../mock/data";
+import { TFilterData } from "../../mock/data";
 import { Button } from "../button/Button";
 
 interface IMenuFilterProps {
-  foodFilterItems: Array<TFoodFilterData>;
+  filterItems: Array<TFilterData>;
 }
 
-export const MenuFilter = ({ foodFilterItems }: IMenuFilterProps) => {
+export const MenuFilter = ({ filterItems }: IMenuFilterProps) => {
   return (
     <StyledMenuFilter>
-      {foodFilterItems.map((item) => (
+      {filterItems.map((item) => (
         <li key={item.id}>
           <Button secondary>{item.title}</Button>
         </li>

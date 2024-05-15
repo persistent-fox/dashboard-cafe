@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import image from './../../../../assets/images/background.jpg';
 
 const Login = styled.section`
 	padding: 64px;
-	background-image: url('./../../../../assets/images/background.jpg');
+	background-image: url(${image});
 `;
 
 const LoginForm = styled.article`

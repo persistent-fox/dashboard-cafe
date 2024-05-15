@@ -1,46 +1,28 @@
-import { Header } from "./components/header/Header";
-import { FlexWrapper } from "../../components/FlexWrapper";
-import { FoodCategory } from "./components/food-category/FoodCategory";
-import { Main } from "../../components/Main";
-import { Breadcrumbs } from "./components/breadcrumbs/Breadcrumbs";
-import { ControlFood } from "./components/control-food/ControlFood";
-import { Route, Routes } from "react-router-dom";
-import { FoodMenu } from "./components/food-menu/FoodMenu";
-import {
-  beveragesCategoryData,
-  coffeeCategoryData,
-  foodCategoryData,
-} from "../../mock/data";
-import { OrderSummary } from "./components/order-summary/OrderSummary";
+import { Navigate, Route, Routes } from 'react-router-dom';
+import { Header } from './components/header/Header';
+import { MenuLayout } from './layouts/menu-layout/MenuLayout';
+import { ReservationLayout } from './layouts/ReservationLayout';
+import { FoodMenu } from './components/food-menu/FoodMenu';
+import { beveragesCategoryData, coffeeCategoryData, foodCategoryData, tablesData } from '../../mock/data';
+import { ReservationTables } from './components/reservation-tables/ReservationTables';
 
-interface IMainLayoutProps {}
-
-export const MainLayout = ({}: IMainLayoutProps) => {
-  return (
-    <>
-      <Header />
-      <FlexWrapper justify={"space-between"}>
-        <FoodCategory />
-        <Main>
-          <Breadcrumbs paths={["Dashboard", "Food"]} />
-          <ControlFood />
-          <Routes>
-            <Route
-              path={"/food"}
-              element={<FoodMenu CategoryData={foodCategoryData} />}
-            />
-            <Route
-              path={"/coffee"}
-              element={<FoodMenu CategoryData={coffeeCategoryData} />}
-            />
-            <Route
-              path={"/beverages"}
-              element={<FoodMenu CategoryData={beveragesCategoryData} />}
-            />
-          </Routes>
-        </Main>
-        <OrderSummary />
-      </FlexWrapper>
-    </>
-  );
+export const MainLayout = () => {
+	return (
+		<>
+			<Header />
+			<Routes>
+				<Route path='/dashboard' element={<MenuLayout />}>
+					<Route path={'*'} element={<Navigate to={'/dashboard'} />} />
+					<Route path={'food'} element={<FoodMenu CategoryData={foodCategoryData} />} />
+					<Route path={'coffee'} element={<FoodMenu CategoryData={coffeeCategoryData} />} />
+					<Route path={'beverages'} element={<FoodMenu CategoryData={beveragesCategoryData} />} />
+				</Route>
+			</Routes>
+			<Routes>
+				<Route path='/reservation' element={<ReservationLayout />}>
+					<Route index element={<ReservationTables tables={tablesData} />} />
+				</Route>
+			</Routes>
+		</>
+	);
 };

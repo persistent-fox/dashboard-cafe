@@ -3,13 +3,11 @@ import { S } from "./ControlFood_Styles";
 import { MenuFilter } from "../../../../components/menu-filter/MenuFilter";
 import { foodFilterData } from "../../../../mock/data";
 
-interface IControlFoodProps {}
-
-export const ControlFood = ({}: IControlFoodProps) => {
+export const ControlFood = () => {
   return (
     <S.ControlFood>
       <Search placeholder={"Search menu..."} />
-      <MenuFilter foodFilterItems={foodFilterData} />
+      <MenuFilter filterItems={foodFilterData} />
     </S.ControlFood>
   );
 };

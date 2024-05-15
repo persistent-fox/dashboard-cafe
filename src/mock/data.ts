@@ -1,3 +1,5 @@
+import { EReservationType } from '../components/checkbox/Checkbox';
+
 export const orderedSummaryData = [
 	{
 		id: 1,
@@ -25,13 +27,13 @@ export const orderedSummaryData = [
 	},
 ];
 
-export type TFoodFilterData = {
+export type TFilterData = {
 	id: number;
 	title: string;
 	filterId: string;
 };
 
-export const foodFilterData: Array<TFoodFilterData> = [
+export const foodFilterData: Array<TFilterData> = [
 	{
 		id: 1,
 		title: 'All',
@@ -56,6 +58,24 @@ export const foodFilterData: Array<TFoodFilterData> = [
 		id: 5,
 		title: 'Rice bowl',
 		filterId: 'rice bowl',
+	},
+];
+
+export const ReservationFilterData: Array<TFilterData> = [
+	{
+		id: 1,
+		title: 'All table',
+		filterId: 'all-table',
+	},
+	{
+		id: 2,
+		title: 'Reservation',
+		filterId: 'reservation',
+	},
+	{
+		id: 3,
+		title: 'Running order',
+		filterId: 'running-order',
 	},
 ];
 
@@ -273,5 +293,197 @@ export const beveragesCategoryData: Array<TFoodCategoryData> = [
 		filterId: 'whisky',
 		srcImg:
 			'https://cdnb.artstation.com/p/assets/images/images/011/721/363/large/christophe-delahaye-front-small.jpg?1531071187',
+	},
+];
+
+export enum TTableType {
+	SMALL = 'small',
+	STANDARD_X = 'standardX',
+	STANDARD_Y = 'standardY',
+	LARGE_X = 'largeX',
+	LARGE_Y = 'largeY',
+}
+
+export type TTablesData = {
+	id: number;
+	name: string;
+	chairsX: number;
+	chairsY: number;
+	type: EReservationType;
+	tableType: TTableType;
+};
+
+export const tablesData: Array<TTablesData> = [
+	{
+		id: 1,
+		name: 'T-01',
+		chairsX: 2,
+		chairsY: 2,
+		type: EReservationType.AVAILABLE,
+		tableType: TTableType.SMALL,
+	},
+	{
+		id: 2,
+		name: 'T-02',
+		chairsX: 0,
+		chairsY: 2,
+		type: EReservationType.AVAILABLE,
+		tableType: TTableType.SMALL,
+	},
+	{
+		id: 3,
+		name: 'T-03',
+		chairsX: 2,
+		chairsY: 8,
+		type: EReservationType.AVAILABLE,
+		tableType: TTableType.STANDARD_Y,
+	},
+	{
+		id: 4,
+		name: 'T-04',
+		chairsX: 0,
+		chairsY: 2,
+		type: EReservationType.AVAILABLESOON,
+		tableType: TTableType.SMALL,
+	},
+	{
+		id: 5,
+		name: 'T-05',
+		chairsX: 2,
+		chairsY: 2,
+		type: EReservationType.BILLED,
+		tableType: TTableType.SMALL,
+	},
+	{
+		id: 6,
+		name: 'T-06',
+		chairsX: 2,
+		chairsY: 10,
+		type: EReservationType.RESERVED,
+		tableType: TTableType.LARGE_Y,
+	},
+	{
+		id: 8,
+		name: 'T-08',
+		chairsX: 2,
+		chairsY: 8,
+		type: EReservationType.AVAILABLE,
+		tableType: TTableType.STANDARD_Y,
+	},
+	{
+		id: 7,
+		name: 'T-07',
+		chairsX: 2,
+		chairsY: 10,
+		type: EReservationType.RESERVED,
+		tableType: TTableType.LARGE_Y,
+	},
+	{
+		id: 9,
+		name: 'T-09',
+		chairsX: 2,
+		chairsY: 0,
+		type: EReservationType.RESERVED,
+		tableType: TTableType.SMALL,
+	},
+	{
+		id: 10,
+		name: 'T-10',
+		chairsX: 2,
+		chairsY: 2,
+		type: EReservationType.AVAILABLE,
+		tableType: TTableType.SMALL,
+	},
+	{
+		id: 11,
+		name: 'T-11',
+		chairsX: 2,
+		chairsY: 8,
+		type: EReservationType.AVAILABLE,
+		tableType: TTableType.STANDARD_Y,
+	},
+	{
+		id: 12,
+		name: 'T-12',
+		chairsX: 2,
+		chairsY: 2,
+		type: EReservationType.BILLED,
+		tableType: TTableType.SMALL,
+	},
+	{
+		id: 13,
+		name: 'T-13',
+		chairsX: 2,
+		chairsY: 0,
+		type: EReservationType.BILLED,
+		tableType: TTableType.SMALL,
+	},
+	{
+		id: 14,
+		name: 'T-14',
+		chairsX: 2,
+		chairsY: 0,
+		type: EReservationType.AVAILABLE,
+		tableType: TTableType.SMALL,
+	},
+	{
+		id: 15,
+		name: 'T-15',
+		chairsX: 2,
+		chairsY: 2,
+		type: EReservationType.BILLED,
+		tableType: TTableType.SMALL,
+	},
+	{
+		id: 16,
+		name: 'T-16',
+		chairsX: 10,
+		chairsY: 2,
+		type: EReservationType.AVAILABLE,
+		tableType: TTableType.LARGE_X,
+	},
+	{
+		id: 17,
+		name: 'T-17',
+		chairsX: 2,
+		chairsY: 2,
+		type: EReservationType.RESERVED,
+		tableType: TTableType.SMALL,
+	},
+	{
+		id: 18,
+		name: 'T-18',
+		chairsX: 2,
+		chairsY: 2,
+		type: EReservationType.AVAILABLE,
+		tableType: TTableType.SMALL,
+	},
+];
+
+export type TListHallLinesData = {
+	id: number;
+	title: string;
+};
+
+export const listHallLinesData: Array<TListHallLinesData> = [
+	{
+		id: 1,
+		title: 'B-1',
+	},
+	{
+		id: 2,
+		title: 'B-2',
+	},
+	{
+		id: 3,
+		title: 'B-3',
+	},
+	{
+		id: 4,
+		title: 'B-4',
+	},
+	{
+		id: 5,
+		title: 'B-5',
 	},
 ];

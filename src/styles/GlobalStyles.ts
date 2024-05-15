@@ -1,8 +1,8 @@
-import { createGlobalStyle } from "styled-components";
-import { theme } from "./theme";
+import { createGlobalStyle } from 'styled-components';
+import { theme } from './theme';
 
 export const GlobalStyles = createGlobalStyle<{
-  theme: typeof theme;
+	theme: typeof theme;
 }>`
   *,
   *:after,
@@ -18,7 +18,7 @@ export const GlobalStyles = createGlobalStyle<{
   *::-webkit-scrollbar-thumb {
     width: 4px;
     border-radius: 4px;
-    background: ${(props) => props.theme.colors.text.gray.light};
+    background: ${props => props.theme.colors.text.gray.light};
   }
   
   li {
@@ -28,14 +28,20 @@ export const GlobalStyles = createGlobalStyle<{
   a {
     text-decoration: none;
     cursor: pointer;
-    color: ${(props) => props.theme.colors.text.primary};
+    color: ${props => props.theme.colors.text.primary};
   }
 
   button {
     background-color: unset;
     border: none;
     cursor: pointer;
-    color: ${(props) => props.theme.colors.text.secondary},
+    color: ${props => props.theme.colors.text.secondary},
+  }
+
+  input {
+    &:focus-visible {
+      outline: 2px solid ${props => props.theme.colors.availableBorder};
+    }
   }
 
   body {
@@ -45,7 +51,7 @@ export const GlobalStyles = createGlobalStyle<{
     font-size: 14px;
     font-weight: 400;
     line-height: 1.2;
-    color: ${(props) => props.theme.colors.text.primary};
-    background-color: ${(props) => props.theme.colors.gray.light};
+    color: ${props => props.theme.colors.text.primary};
+    background-color: ${props => props.theme.colors.gray.light};
   }
 `;
