@@ -32,7 +32,7 @@ export const ReservationTables = ({ tables }: TReservationTablesProps) => {
 				<HallLine listLines={listHallLinesData} />
 				<HallLine listLines={listHallLinesData} />
 			</FlexWrapper>
-			<RunningOrder />
+			{/* <RunningOrder /> */}
 		</S.ReservationTables>
 	);
 };

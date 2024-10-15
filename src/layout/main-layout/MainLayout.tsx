@@ -10,18 +10,18 @@ export const MainLayout = () => {
 	return (
 		<>
 			<Header />
-			<Routes>
-				<Route path='/dashboard' element={<MenuLayout />}>
-					<Route path={'*'} element={<Navigate to={'/dashboard/food'} />} />
+			<Routes /*location='/dashboard-cafe'*/>
+				<Route path={'/'} element={<Navigate to={'/dashboard-cafe/food'} />} />
+				<Route path='/dashboard-cafe' element={<MenuLayout />}>
+					<Route path={'*'} element={<Navigate to={'/dashboard-cafe/food'} />} />
 					<Route path={'food'} element={<FoodMenu CategoryData={foodCategoryData} />} />
 					<Route path={'coffee'} element={<FoodMenu CategoryData={coffeeCategoryData} />} />
 					<Route path={'beverages'} element={<FoodMenu CategoryData={beveragesCategoryData} />} />
 				</Route>
-			</Routes>
-			<Routes>
 				<Route path='/reservation' element={<ReservationLayout />}>
 					<Route index element={<ReservationTables tables={tablesData} />} />
 				</Route>
+				<Route path={'*'} element={<Navigate to={'/dashboard-cafe'} />} />
 			</Routes>
 		</>
 	);

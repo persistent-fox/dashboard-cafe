@@ -7,37 +7,37 @@ export const FoodCategory = () => {
 			id: 1,
 			title: 'coffee',
 			iconId: 'coffee',
-			path: '/dashboard/coffee',
+			path: '/dashboard-cafe/coffee',
 		},
 		{
 			id: 2,
 			title: 'Beverages',
 			iconId: 'beverages',
-			path: '/dashboard/beverages',
+			path: '/dashboard-cafe/beverages',
 		},
 		{
 			id: 3,
 			title: 'Food',
 			iconId: 'food',
-			path: '/dashboard/food',
+			path: '/dashboard-cafe/food',
 		},
 		{
 			id: 4,
 			title: 'Appetizer',
 			iconId: 'appetizer',
-			path: '/dashboard/appetizer',
+			path: '/dashboard-cafe/appetizer',
 		},
 		{
 			id: 5,
 			title: 'Bread',
 			iconId: 'bread',
-			path: '/dashboard/bread',
+			path: '/dashboard-cafe/bread',
 		},
 		{
 			id: 6,
 			title: 'Snack',
 			iconId: 'snack',
-			path: '/dashboard/snack',
+			path: '/dashboard-cafe/snack',
 		},
 	];
 
